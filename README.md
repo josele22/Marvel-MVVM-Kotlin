@@ -5,7 +5,7 @@ Como solución aportada, se detalla entre otras las siguiente:
 1. Como patrón de diseño, se ha implementado MVVM, modelo vista vista modelo, para tratar de desacoplar todo lo posible la interfaz de usuario, de la lógica de la aplicación.
 
 2. Para conseguir lo anterior, se ha dividido el proyecto por capas: ui,domain y data. Cada una de ellas, contiene diferentes clases que se encargan únicamente de realizar, aquello
-para lo que han sido creadas dentro de su capa y asumiendo lo propio de cada nivel.
+para lo que han sido creadas dentro de su capa y asumiendo su tarea teniendo en cuenta el nivel en el que se encuentran.
 
 3. En el proyecto se han utilizado librerias como: Retrofit para realizar las llamadas a los servicios, como GSON para realizar el parseo correspondiente de datos que llegan de los mismos,
 así como otras dependencias para poder realizar lo solicitado en la prueba.
