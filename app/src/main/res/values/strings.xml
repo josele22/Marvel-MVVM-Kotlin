@@ -1,0 +1,10 @@
+<resources>
+    <!--App Name-->
+    <string name="app_name">Marvel-JTA</string>
+
+    <!--Message-->
+    <string name="api_response_type_id_type">There was an error loading data type</string>
+    <string name="api_response_type_data">There was a problem loading the data</string>
+    <string name="api_response_type_response">The response has not been valid</string>
+
+</resources>
