@@ -6,7 +6,7 @@ Como solución aportada, se detalla entre otras las siguiente:
 para lo que han sido creadas dentro de su capa y asumiendo lo propio de cada nivel.
 
 3. En el proyecto se han utilizado librerias como: Retrofit para realizar las llamadas a los servicios, como GSON para realizar el parseo correspondiente de datos que llegan de los mismos,
-así como otras dependencias para poder realizar lo solicitado en la prueba.
+así como otras dependencias/librerias.
 
 4. Por destacar otro punto, para la capa de la vista, se ha empleado un método llamado ViewBinding, que permite enlazar vistas de forma sencilla.
 
