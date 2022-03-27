@@ -1,3 +1,5 @@
+
+
 Como solución aportada, se detalla entre otras las siguiente:
 
 1. Como patrón de diseño, se ha implementado MVVM, modelo vista vista modelo, para tratar de desacoplar todo lo posible la interfaz de usuario, de la lógica de la aplicación.
