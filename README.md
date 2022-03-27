@@ -10,6 +10,6 @@ así como otras dependencias/librerias.
 
 4. Por destacar otro punto, para la capa de la vista, se ha empleado un método llamado ViewBinding, que permite enlazar vistas de forma sencilla.
 
-5. Por último y por resumir, que se ha empleado KOTLIN en todo el proyecto.
+5. Por último,que se ha empleado el lenguaje de programación KOTLIN en todo el proyecto.
 
 
