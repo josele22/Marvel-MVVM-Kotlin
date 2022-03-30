@@ -11,8 +11,10 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class FakeViewModel(private val fakeListCharacterUseCase: FakeListCharacterUseCase,
-                    private val fakeCharacterUseCase: FakeCharacterUseCase) : ViewModel() {
+class FakeViewModel(
+    private val fakeListCharacterUseCase: FakeListCharacterUseCase,
+    private val fakeCharacterUseCase: FakeCharacterUseCase
+) : ViewModel() {
 
     private val _characters = MutableLiveData<List<CharacterDomain>>()
 

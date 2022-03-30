@@ -7,7 +7,7 @@ import okhttp3.Request
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-object RemoteClient {
+class RemoteClient {
 
     val BASE_URL = "https://gateway.marvel.com/"
     val TS = "1000"

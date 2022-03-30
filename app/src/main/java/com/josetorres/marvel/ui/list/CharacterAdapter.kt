@@ -1,4 +1,4 @@
-package com.josetorres.marvel.ui.main
+package com.josetorres.marvel.ui.list
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

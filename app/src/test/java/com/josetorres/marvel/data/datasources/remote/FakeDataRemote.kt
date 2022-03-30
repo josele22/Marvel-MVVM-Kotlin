@@ -60,7 +60,7 @@ val eitherCharacterListKoCaseTwo = EitherListCharacter(ApiError("404", "Not foun
 val eitherCharacterListOkCaseOne =
     EitherListCharacter(success = SucessResponse("200", characterListFakeDataOne()))
 
-
+/**RESPONSE LIST CHARACTERS**/
 fun characterListFakeDataOne(): List<CharacterDomain> {
     return listOf(
         CharacterDomain(
@@ -102,6 +102,8 @@ fun characterListFakeDataTwo(): List<CharacterDomain> {
 
     )
 }
+
+
 
 
 

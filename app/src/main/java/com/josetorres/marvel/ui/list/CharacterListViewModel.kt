@@ -1,28 +1,17 @@
-package com.josetorres.marvel.ui.main
+package com.josetorres.marvel.ui.list
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.josetorres.marvel.data.datasources.remote.CharacterRemoteDataSourceImpl
 import com.josetorres.marvel.data.datasources.remote.model.response.NetworkResponse
-import com.josetorres.marvel.data.datasources.remote.service.retrofit.RemoteClient
-import com.josetorres.marvel.data.repository.CharacterRepositoryImpl
 import com.josetorres.marvel.domain.model.CharacterDomain
 import com.josetorres.marvel.domain.usescases.GetCharactersListUseCase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 
-class MainViewModel() : ViewModel() {
-
-    private val loadCharacters = GetCharactersListUseCase(
-        CharacterRepositoryImpl(
-            CharacterRemoteDataSourceImpl(
-                RemoteClient
-            )
-        )
-    )
+class CharacterListViewModel(private val loadCharacterListUseCase: GetCharactersListUseCase) : ViewModel() {
 
     private val _progressVisible = MutableLiveData<Boolean>()
     val progressVisible: LiveData<Boolean> get() = _progressVisible
@@ -36,7 +25,7 @@ class MainViewModel() : ViewModel() {
 
             _progressVisible.value = true
 
-            when (val result = loadCharacters.invoke()) {
+            when (val result = loadCharacterListUseCase.invoke()) {
 
                 is NetworkResponse.Error -> {
 

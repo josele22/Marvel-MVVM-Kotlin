@@ -4,6 +4,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.josetorres.marvel.CharacterApplication
+import com.josetorres.marvel.R
 import com.josetorres.marvel.data.datasources.remote.CharacterRemoteDataSourceImpl
 import com.josetorres.marvel.data.datasources.remote.model.response.NetworkResponse
 import com.josetorres.marvel.data.datasources.remote.service.retrofit.RemoteClient
@@ -13,15 +15,7 @@ import com.josetorres.marvel.domain.usescases.GetCharacterDetailUseCase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class DetailViewModel : ViewModel() {
-
-    private val loadCharacterDetail = GetCharacterDetailUseCase(
-        CharacterRepositoryImpl(
-            CharacterRemoteDataSourceImpl(
-                RemoteClient
-            )
-        )
-    )
+class DetailViewModel(private val loadCharacterDetailUseCase: GetCharacterDetailUseCase) : ViewModel() {
 
     private val _progressVisible = MutableLiveData<Boolean>()
     val progressVisible: LiveData<Boolean> get() = _progressVisible
@@ -38,7 +32,7 @@ class DetailViewModel : ViewModel() {
 
             if (!idCharacter.isNullOrEmpty()) {
 
-                when (val result = loadCharacterDetail.invoke(idCharacter)) {
+                when (val result = loadCharacterDetailUseCase.invoke(idCharacter)) {
 
                     is NetworkResponse.Error -> {
 
@@ -55,7 +49,7 @@ class DetailViewModel : ViewModel() {
                 }
             } else {
                 _state.value = UiState(
-                    error = "El ID seleccionado no es correcto"
+                    error = CharacterApplication.applicationContext().resources.getString(R.string.api_response_detail_character)
                 )
             }
 
@@ -69,4 +63,5 @@ class DetailViewModel : ViewModel() {
         val character: CharacterDomain? = null,
         val error: String? = null,
     )
+
 }

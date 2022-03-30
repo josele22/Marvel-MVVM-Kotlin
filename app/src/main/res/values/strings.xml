@@ -2,9 +2,11 @@
     <!--App Name-->
     <string name="app_name">Marvel-JTA</string>
 
-    <!--Message-->
+    <!--Messages-->
     <string name="api_response_type_id_type">There was an error loading data type</string>
     <string name="api_response_type_data">There was a problem loading the data</string>
     <string name="api_response_type_response">The response has not been valid</string>
+    <string name="api_response_detail_character">The selected ID is not correct</string>
+    <string name="character_detail_selected_error">The selected character is empty/null</string>
 
 </resources>

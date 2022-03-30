@@ -2,6 +2,10 @@ package com.josetorres.marvel
 
 import android.app.Application
 import android.content.Context
+import com.josetorres.marvel.di.dataModule
+import com.josetorres.marvel.di.domainModule
+import com.josetorres.marvel.di.uiModule
+import org.koin.core.context.startKoin
 
 class CharacterApplication : Application() {
 
@@ -19,6 +23,9 @@ class CharacterApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        val context: Context = applicationContext()
+
+        startKoin {
+            modules(dataModule, domainModule, uiModule)
+        }
     }
 }

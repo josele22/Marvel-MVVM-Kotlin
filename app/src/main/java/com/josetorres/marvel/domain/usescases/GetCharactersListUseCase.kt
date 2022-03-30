@@ -8,7 +8,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
 class GetCharactersListUseCase(
-    private val repository: CharacterRepositoryImpl = CharacterRepositoryImpl()
+    private val repository: CharacterRepositoryImpl
 ) {
     suspend fun invoke(): NetworkResponse<ApiError.Response, List<CharacterDomain>> =
         withContext(Dispatchers.IO) {

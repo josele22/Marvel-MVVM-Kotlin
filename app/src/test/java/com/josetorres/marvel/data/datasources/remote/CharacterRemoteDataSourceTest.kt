@@ -2,6 +2,7 @@ package com.josetorres.marvel.data.datasources.remote
 
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.test.runBlockingTest
 import org.junit.Assert
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -22,7 +23,7 @@ class CharacterRemoteDataSourceTest {
     @Test
     fun `server return code 200 - case 0`() {
 
-        runBlocking {
+        runBlockingTest {
 
             whenever(remoteDataSourceFakeImpl.getCharacterList()).thenReturn(
                 eitherCharacterListOkCaseOne
@@ -46,7 +47,7 @@ class CharacterRemoteDataSourceTest {
     @Test
     fun `server return code 409 - case 1`() {
 
-        runBlocking {
+        runBlockingTest {
 
             whenever(remoteDataSourceFakeImpl.getCharacterList()).thenReturn(
                 eitherCharacterListKoCaseOne
@@ -70,7 +71,7 @@ class CharacterRemoteDataSourceTest {
     @Test
     fun `server return code 404 - case 2`() {
 
-        runBlocking {
+        runBlockingTest {
 
             whenever(remoteDataSourceFakeImpl.getCharacterList()).thenReturn(
                 eitherCharacterListKoCaseTwo

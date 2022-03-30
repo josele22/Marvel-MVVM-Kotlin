@@ -9,7 +9,7 @@ import kotlinx.coroutines.withContext
 
 class GetCharacterDetailUseCase(private val repository: CharacterRepositoryImpl) {
 
-    suspend fun invoke(idCharacter: String): NetworkResponse<ApiError.Response, CharacterDomain>? =
+    suspend fun invoke(idCharacter: String): NetworkResponse<ApiError.Response, CharacterDomain> =
         withContext(Dispatchers.IO) {
             repository.getCharacterDetail(idCharacter)
         }

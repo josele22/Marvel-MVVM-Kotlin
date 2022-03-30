@@ -22,7 +22,7 @@ import org.mockito.kotlin.whenever
 
 @ExperimentalCoroutinesApi
 @RunWith(MockitoJUnitRunner::class)
-class MainViewModelTest {
+class CharacterListViewModelTest {
 
     @Mock
     lateinit var observerOne: Observer<List<CharacterDomain>>

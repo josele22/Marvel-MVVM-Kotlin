@@ -15,16 +15,13 @@
         android:theme="@style/Theme.MarvelJTA"
         android:usesCleartextTraffic="true">
         <activity
-            android:name="com.josetorres.marvel.ui.main.MainActivity"
+            android:name="com.josetorres.marvel.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.josetorres.marvel.ui.detail.DetailActivity"
-            android:exported="true"></activity>
     </application>
 
 </manifest>
