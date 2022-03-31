@@ -81,7 +81,7 @@ class GetCharactersUseCaseTest {
             )
 
 
-            //Check in GetCharacrerListUseCase
+            //Check in GetCharacterDetailUseCase
             Assert.assertEquals(expectedResponse, getCharacterDetailUseCase.invoke("1234"))
 
             //Check in

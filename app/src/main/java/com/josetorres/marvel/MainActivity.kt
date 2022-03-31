@@ -13,14 +13,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val navHostFragment =
-            this.supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        val navHostFragment = this.supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        
         NavigationUI.setupActionBarWithNavController(this, navHostFragment.navController)
 
-        NavigationUI.setupActionBarWithNavController(
-            this,
-            navHostFragment.navController,
-        )
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
